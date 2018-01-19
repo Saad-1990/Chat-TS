@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat Window</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Resource style -->
+
+    <script src="/js/jquery-2.1.4.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/velocity.min.js"></script>
+
+</head>
+<body>
+
+<ul class="cd-pricing">
+    <div>
+        <footer class="cd-pricing-footer">
+            <a href="#0"><i class="fa fa-comments" aria-hidden="true"></i></a>
+            <div id="signals">
+                <span class="signal s1"></span>
+                <span class="signal s2"></span>
+                <span class="signal s3"></span>
+            </div>
+        </footer> <!-- .cd-pricing-footer -->
+    </div>
+</ul> <!-- .cd-pricing -->
+
+<div class="cd-form">
+
+    <form action="">
+        <fieldset>
+            <legend>Fill Your Info</legend>
+
+            <div class="full-width">
+                <label for="userName">Name</label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <div class="full-width">
+                <label for="userEmail">Email</label>
+                <input type="email" id="userEmail" name="userEmail">
+            </div>
+
+            <div class="full-width">
+                <label for="userPhone">Password</label>
+                <input type="tel" id="userPhone" name="userPhone">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div>
+                <input type="submit"  value="Get started">
+            </div>
+        </fieldset>
+    </form>
+
+    <a href="#0" class="cd-close"></a>
+</div> <!-- .cd-form -->
+
+<div class="cd-overlay"></div> <!-- shadow layer -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
