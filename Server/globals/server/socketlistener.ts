@@ -1,6 +1,4 @@
 /// <reference path="../../typings/index.d.ts" />
-//Created By Saad Ismail Shaikh
-//Date : 19-1-2018
 
 // Expree object to use Express App
 import * as express from "express";
