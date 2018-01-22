@@ -1,4 +1,7 @@
 /// <reference path="../../typings/index.d.ts" />
+//Created By Saad Ismail Shaikh
+//Date : 19-1-2018
+
 
 //Express Module Reference
 import * as express from 'express';
@@ -14,26 +17,26 @@ import * as path from "path";
 // Since this will contain our static assest hence this path will remain static.
 
 //Router Object Which Will be used to validate requests in Request Handler.
-const router: express.Router = express.Router();
+var router: express.Router = express.Router();
 
 const publicPath = path.resolve(__dirname + '/../../');
 
 
 // Default Home Pages Routes of Application.
 router.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../../', 'dummy.html'));
+    res.sendFile(publicPath + '/' + 'dummy.html');
 });
 
 router.get('/index', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../../', 'dummy.html'));
+    res.sendFile(publicPath + '/' + 'dummy.html');
 });
 
 router.get('/home', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../../', 'dummy.html'));
+    res.sendFile(publicPath + '/' + 'dummy.html');
 });
 
 router.get('/default', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../../', 'dummy.html'));
+    res.sendFile(publicPath + '/' + 'dummy.html');
 });
 
 //Assets Routes Which May be required when requesting application contents

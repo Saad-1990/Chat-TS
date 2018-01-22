@@ -1,4 +1,7 @@
 /// <reference path="typings/index.d.ts" />
+//Created By Saad Ismail Shaikh
+//Date : 19-1-2018
+
 
 // Initialization of  Required Modules.
 
@@ -23,6 +26,13 @@ import { server } from "./globals/server/httplistener";
 
 // socketListener Will Hook Http Server.
 import { SocketListener } from "./globals/server/socketlistener";
+
+//Database Connection Singleton Instantiation.
+//If Application can't connect to database it will be closed automatically.
+import { DataBaseConfig } from "./globals/config/database"
+import { Db } from "mongodb";
+let db: Db = DataBaseConfig.connect();
+
 
 // Main Application Loop
 let io = SocketListener.StartListener(server);

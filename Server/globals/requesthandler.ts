@@ -17,7 +17,7 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 
 // import Common Routes
-import * as Routes from "./config/staticRoutes"
+import * as Routes from "./config/routes"
 
 //Singleton
 export default class RequestHandler {
@@ -27,10 +27,9 @@ export default class RequestHandler {
         // allow to pass/convert query tring as json
         application.use(bodyParser.json());
 
-        // Extended property allows to has embedded object in query string.
+        // Extended property allows to have embedded object in query string URI.
         // See Following Reference
         //https://stackoverflow.com/questions/29960764/what-does-extended-mean-in-express-4-0
-
         application.use(bodyParser.urlencoded({
             extended: true
         }));
@@ -38,6 +37,8 @@ export default class RequestHandler {
         //Routes to Serve For Static Files
         application.use('/', Routes.StaticRoutes);
 
+        // Additional Routes Can be defined here. (API ROUTES)
+        application.use('/visitor', Routes.visitorRoutes);
 
         return application;
     }
